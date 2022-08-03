@@ -1,5 +1,5 @@
 /*
-    Title:  Program to generate output to the PC screen
+    Title:  Program to generate output to the PC screen using MBED OS6
     Author: Your Name, Student ID, Course CODE, Lab Section
     Date:   Today's Date
     Description:    This program will take characters from the keyboard and
@@ -16,8 +16,8 @@ int main(void)
 
     for(;;) {
         input=getc(stdin);      // get char and put into variable input
-        //  if(input == 0x0d)     // if input is <RETURN>
-        //  putc(0x0a,stdout);    // output a <LINE FEED>
+        putc(input,stdout);     // send char to output buffer
+        fflush(stdout);         // flush output buffer to screen
    
     }
 }
