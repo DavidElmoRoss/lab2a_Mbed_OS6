@@ -16,8 +16,11 @@ int main(void)
 
     for(;;) {
         input=getc(stdin);      // get char and put into variable input
+       if(input==0x0a)
+       {
         putc(input,stdout);     // send char to output buffer
+       }
         fflush(stdout);         // flush output buffer to screen
-   
+
     }
 }
